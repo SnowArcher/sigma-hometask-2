@@ -1,0 +1,25 @@
+body {
+    font-family: 'Roboto Regular', sans-serif;
+}
+.conteiner {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 140/1440*100%;
+    padding-right: 140/1440*100%;
+}
+@media (max-width:1200px) {
+    .conteiner{
+        max-width: 970px;
+    }
+}
+@media (max-width:992px) {
+    .conteiner{
+        max-width: 750px;
+    }
+}
+@media (max-width:767px) {
+    .conteiner{
+        max-width: none;
+    }
+}

@@ -1,0 +1,155 @@
+.book-your-trip {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 200px;
+    .book-menu {
+        >p {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            color: #5E6282;
+        }
+        >h1 {
+            font-family: 'Volkhov';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 64px;
+            text-transform: capitalize;
+            color: #14183E;
+        }
+        .book-list {
+            .book-block {
+                display: flex;
+                .book-icon {
+
+                }
+                .book-text {
+                    h3 {
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 124.5%; 
+                        color: #5E6282;
+                    }
+                    p {
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 124.5%;
+                        color: #5E6282;
+                    }
+                }
+            }
+
+        }
+    }
+    .trip {
+        position: relative;
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+        border-radius: 26px;
+        .trip-photo {
+            border: 2px solid #000000;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 24px;
+        }
+        h2 {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 124.5%;
+            letter-spacing: 0.015em;
+            color: #080809;
+        }
+        .date {
+            display: flex;
+            p {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 124.5%;
+                letter-spacing: -0.005em;
+                color: #84829A;
+            }
+        }
+        .ongoing-icons {
+
+        }
+        .people {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .people-going {
+                display: flex;
+                .heart-icon {
+
+                    
+                }
+            }
+        }
+        .ongoing-menu {
+            position: absolute;
+            z-index: 2;
+            visibility: hidden;
+            left: 200px;
+            bottom: 80px;
+            background: #FFFFFF;
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+            border-radius: 18px;
+            display: flex;
+            .ongoing-content {
+                p {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 124.5%;
+                    letter-spacing: -0.035em;
+                    color: #84829A;
+                }
+                h3 {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 124.5%;
+                    letter-spacing: -0.015em;
+                    color: #080809;
+                }
+                .percent {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 124.5%;
+                    letter-spacing: -0.055em;
+                    color: #8A79DF;
+                    span {
+                        color: #080809;
+                    }
+                }
+                .slider-background {
+                    position: relative;
+                    width: 156px;
+                    height: 5px;
+                    background: #F5F5F5;
+                    border-radius: 30px;
+                    .slider {
+                        position: absolute;
+                        z-index: 3;
+                        width: 73px;
+                        height: 5px;
+                        background: #8A79DF;
+                        border-radius: 30px;
+                    }
+                }
+            } 
+        }
+    }
+}

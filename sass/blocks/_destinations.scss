@@ -1,0 +1,81 @@
+.destinations {
+    position: relative;
+    padding-bottom: 145px;
+    .decore {
+        position: absolute;
+        z-index: -1;
+        right: 5%;
+        top: 30%;
+    }
+    p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        color: #5E6282;
+        
+    }
+    h1 {
+        font-family: 'Volkhov';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 64px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #14183E;
+    }
+    .dest-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        .dest-box {
+            position: relative;
+            filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
+            border-radius: 24px;
+            .place {
+                border-radius: 24px;
+            }
+            .card {
+                position: absolute;
+                bottom: 0;
+                height: 130px;
+                background-color: white;
+                border-radius: 0 0 24px 24px;
+                z-index: 2;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                .first-row, .second-row {
+                    padding-left: 20px;
+                    padding-right: 25px;
+                    display: flex;
+                    p {
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 124.5%;
+                        color: #5E6282;
+                    }
+                }
+                .first-row { 
+                    padding-top: 27px;
+                    justify-content: space-between;
+                }
+                .second-row {
+                    justify-content: flex-start;
+                    padding-top: 20px;
+                    padding-bottom: 42px;
+                    p:nth-child(2) {
+                        padding-left: 15px;
+                    } 
+                }
+            }
+        }
+    }
+}

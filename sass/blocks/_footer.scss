@@ -1,0 +1,63 @@
+.footer {
+    >p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 124.5%;
+        color: #5E6282;
+        text-align: center;
+    }
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        >p {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 124.5%;
+            color: #5E6282;
+        }
+        .footer-logo {
+            max-width: 207px;
+            h1 {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 44px;
+                line-height: 66px;
+                color: #181E4B;
+            }
+            p {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 124.5%;
+                color: #5E6282;
+            }
+        }
+        .footer-menu {
+            h1 {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 21px;
+                line-height: 124.5%;
+                color: #080809;
+            }
+            ul {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 124.5%;
+                color: #5E6282;
+            }
+        }
+        .discover {
+            
+        }
+    }
+}
