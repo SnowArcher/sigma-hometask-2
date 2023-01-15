@@ -1,0 +1,30 @@
+@mixin padding-left($pl, $origin-length){
+    padding-left: $pl/$origin-length*100%;
+}
+@mixin padding-right($pr, $origin-length){
+    padding-right: $pr/$origin-length*100%;
+}
+@mixin padding-top($pt, $origin-length){
+    padding-top: $pt/$origin-length*100%;
+}
+@mixin padding-bottom($pb, $origin-length){
+    padding-bottom: $pb/$origin-length*100%;
+}
+@mixin margin-left($ml, $origin-length){
+    padding-left: $ml/$origin-length*100%;
+}
+@mixin margin-right($mr, $origin-length){
+    padding-right: $mr/$origin-length*100%;
+}
+@mixin margin-top($mt, $origin-length){
+    padding-top: $mt/$origin-length*100%;
+}
+@mixin margin-bottom($mb, $origin-length){
+    padding-bottom: $ml/$origin-length*100%;
+}
+@mixin width($w, $origin-length){
+    width: $w/$origin-length*100%;
+}
+@mixin height($h, $origin-length){
+    height: $h/$origin-length*100%;
+}

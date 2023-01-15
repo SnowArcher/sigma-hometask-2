@@ -1,12 +1,6 @@
 .destinations {
     position: relative;
     padding-bottom: 145px;
-    .decore {
-        position: absolute;
-        z-index: -1;
-        right: 5%;
-        top: 30%;
-    }
     p {
         font-family: 'Poppins';
         font-style: normal;
@@ -37,6 +31,12 @@
             position: relative;
             filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
             border-radius: 24px;
+            .decore {
+                position: absolute;
+                z-index: -1;
+                left: 90%;
+                top: 30%;
+            }
             .place {
                 border-radius: 24px;
             }

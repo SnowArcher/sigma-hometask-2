@@ -61,20 +61,22 @@ body {
     max-width: none;
   }
 }
-@-webkit-keyframes flight {
+@-webkit-keyframes bigBoxAnimation {
   100% {
-    left: 800px;
-    bottom: 800px;
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
   }
 }
-@keyframes flight {
+@keyframes bigBoxAnimation {
   100% {
-    left: 800px;
-    bottom: 800px;
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
   }
 }
 .main {
+  max-width: 1440px;
   width: 100%;
+  margin-bottom: 100px;
   position: relative;
 }
 .main .decore {
@@ -111,15 +113,16 @@ body {
   display: flex;
 }
 .main .nav .nav-list ul li {
-  margin-right: 60px;
+  margin-right: 40px;
+  border: 1px;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 .main .nav .nav-list ul li:last-child {
   margin: 0;
 }
 .main .nav .nav-list ul li:nth-child(6) {
   border: 1px solid #212832;
-  border-radius: 5px;
-  padding: 5px 10px;
 }
 .main .nav .nav-list ul li a {
   display: block;
@@ -131,9 +134,10 @@ body {
   line-height: 22px;
   color: #212832;
 }
-.main .nav .nav-list ul li a.active, .main .nav .nav-list ul li a:hover {
+.main .nav .nav-list ul li a:hover {
   color: orange;
-  font-weight: 700;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 .main .nav .nav-list ul li a:last-child {
   display: -webkit-box;
@@ -153,8 +157,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   width: 100%;
-  padding-bottom: 100px;
 }
 .main .main-content .travel {
   display: -webkit-box;
@@ -164,7 +168,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 45%;
+  padding-top: 100px;
+  width: 55%;
 }
 .main .main-content .travel > p {
   font-family: "Poppins";
@@ -174,8 +179,9 @@ body {
   line-height: 30px;
   text-transform: uppercase;
   color: #DF6951;
+  margin-bottom: 24px;
 }
-.main .main-content .travel h1 {
+.main .main-content .travel > h1 {
   font-family: "Volkhov";
   font-style: normal;
   font-weight: 700;
@@ -183,14 +189,16 @@ body {
   line-height: 89px;
   letter-spacing: -0.04em;
   color: #181E4B;
+  margin-bottom: 30px;
 }
-.main .main-content .travel h3 {
+.main .main-content .travel > h3 {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;
   color: #5E6282;
+  margin-bottom: 30px;
 }
 .main .main-content .travel .main-buttons {
   display: -webkit-box;
@@ -216,6 +224,7 @@ body {
   color: #FFFFFF;
 }
 .main .main-content .travel .main-buttons .play-button button {
+  margin-left: 44px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,7 +238,22 @@ body {
   line-height: 26px;
   color: #686D77;
 }
-.main .main-content .travel .main-buttons .play-button button img {
+.main .main-content .travel .main-buttons .play-button button > p {
+  padding-left: 21px;
+}
+.main .main-content .travel .main-buttons .play-button button .pink-circle {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #DF6951;
+  -webkit-box-shadow: 0px 15px 30px rgba(223, 105, 81, 0.3);
+          box-shadow: 0px 15px 30px rgba(223, 105, 81, 0.3);
+}
+.main .main-content .travel .main-buttons .play-button button .pink-circle > img {
+  position: absolute;
+  top: 18.5px;
+  left: 22px;
   display: block;
 }
 .main .main-content .travel-photo {
@@ -248,16 +272,16 @@ body {
   left: 20%;
   z-index: 2;
 }
-.main .main-content .travel-photo .airplane-1:hover {
-  -webkit-animation: 3s flight;
-          animation: 3s flight;
-}
 .main .main-content .travel-photo .airplane-2 {
   position: absolute;
   width: 20%;
   top: 12%;
   right: 0;
   z-index: 0;
+}
+.main .main-content .travel-photo .airplane-fl {
+  -webkit-animation: bigBoxAnimation 3s infinite linear;
+          animation: bigBoxAnimation 3s infinite linear;
 }
 
 .book-your-trip {
@@ -267,7 +291,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 200px;
+}
+.book-your-trip .book-menu {
+  width: 50%;
 }
 .book-your-trip .book-menu > p {
   font-family: "Poppins";
@@ -276,6 +302,7 @@ body {
   font-size: 18px;
   line-height: 27px;
   color: #5E6282;
+  margin-bottom: 15px;
 }
 .book-your-trip .book-menu > h1 {
   font-family: "Volkhov";
@@ -285,11 +312,17 @@ body {
   line-height: 64px;
   text-transform: capitalize;
   color: #14183E;
+  margin-bottom: 30px;
 }
 .book-your-trip .book-menu .book-list .book-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 400px;
+  margin-bottom: 50px;
+}
+.book-your-trip .book-menu .book-list .book-block .book-icon {
+  margin-right: 20px;
 }
 .book-your-trip .book-menu .book-list .book-block .book-text h3 {
   font-family: "Poppins";
@@ -298,6 +331,7 @@ body {
   font-size: 16px;
   line-height: 124.5%;
   color: #5E6282;
+  margin-bottom: 5px;
 }
 .book-your-trip .book-menu .book-list .book-block .book-text p {
   font-family: "Poppins";
@@ -309,6 +343,9 @@ body {
 }
 .book-your-trip .trip {
   position: relative;
+  margin-top: 7.5%;
+  margin-bottom: 15%;
+  margin-right: 5%;
   -webkit-box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
           box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
   border-radius: 26px;
@@ -318,6 +355,7 @@ body {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 24px;
+  margin: 20px;
 }
 .book-your-trip .trip h2 {
   font-family: "Poppins";
@@ -327,11 +365,14 @@ body {
   line-height: 124.5%;
   letter-spacing: 0.015em;
   color: #080809;
+  margin-left: 20px;
+  margin-bottom: 15px;
 }
 .book-your-trip .trip .date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 20px;
 }
 .book-your-trip .trip .date p {
   font-family: "Poppins";
@@ -341,6 +382,9 @@ body {
   line-height: 124.5%;
   letter-spacing: -0.005em;
   color: #84829A;
+}
+.book-your-trip .trip .ongoing-icons {
+  margin: 20px;
 }
 .book-your-trip .trip .people {
   display: -webkit-box;
@@ -352,18 +396,43 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 .book-your-trip .trip .people .people-going {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.book-your-trip .trip .ongoing-menu {
-  position: absolute;
-  z-index: 2;
+.book-your-trip .trip .people .people-going > img {
+  margin-right: 10px;
+}
+.book-your-trip .trip .people .people-going p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 124.5%;
+  letter-spacing: -0.02em;
+  color: #84829A;
+}
+.book-your-trip .trip .people .tooltip {
+  position: relative;
+  display: inline-block;
+}
+.book-your-trip .trip .people .tooltip:hover .ongoing-menu {
+  visibility: visible;
+  opacity: 1;
+}
+.book-your-trip .trip .people .tooltip .ongoing-menu {
   visibility: hidden;
-  left: 200px;
-  bottom: 80px;
+  position: absolute;
+  z-index: 1;
+  width: 270px;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -160px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
           box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
@@ -371,8 +440,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  padding: 20px;
 }
-.book-your-trip .trip .ongoing-menu .ongoing-content p {
+.book-your-trip .trip .people .tooltip .ongoing-menu .ongoing-content {
+  padding-left: 20px;
+}
+.book-your-trip .trip .people .tooltip .ongoing-menu .ongoing-content p {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
@@ -381,7 +457,7 @@ body {
   letter-spacing: -0.035em;
   color: #84829A;
 }
-.book-your-trip .trip .ongoing-menu .ongoing-content h3 {
+.book-your-trip .trip .people .tooltip .ongoing-menu .ongoing-content h3 {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
@@ -389,8 +465,10 @@ body {
   line-height: 124.5%;
   letter-spacing: -0.015em;
   color: #080809;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.book-your-trip .trip .ongoing-menu .ongoing-content .percent {
+.book-your-trip .trip .people .tooltip .ongoing-menu .percent {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
@@ -398,18 +476,19 @@ body {
   line-height: 124.5%;
   letter-spacing: -0.055em;
   color: #8A79DF;
+  padding-bottom: 5px;
 }
-.book-your-trip .trip .ongoing-menu .ongoing-content .percent span {
+.book-your-trip .trip .people .tooltip .ongoing-menu .percent span {
   color: #080809;
 }
-.book-your-trip .trip .ongoing-menu .ongoing-content .slider-background {
+.book-your-trip .trip .people .tooltip .ongoing-menu .slider-background {
   position: relative;
   width: 156px;
   height: 5px;
   background: #F5F5F5;
   border-radius: 30px;
 }
-.book-your-trip .trip .ongoing-menu .ongoing-content .slider-background .slider {
+.book-your-trip .trip .people .tooltip .ongoing-menu .slider-background .slider {
   position: absolute;
   z-index: 3;
   width: 73px;
@@ -421,12 +500,6 @@ body {
 .destinations {
   position: relative;
   padding-bottom: 145px;
-}
-.destinations .decore {
-  position: absolute;
-  z-index: -1;
-  right: 5%;
-  top: 30%;
 }
 .destinations p {
   font-family: "Poppins";
@@ -464,6 +537,12 @@ body {
   -webkit-filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
           filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
   border-radius: 24px;
+}
+.destinations .dest-content .dest-box .decore {
+  position: absolute;
+  z-index: -1;
+  left: 90%;
+  top: 30%;
 }
 .destinations .dest-content .dest-box .place {
   border-radius: 24px;
@@ -524,6 +603,8 @@ body {
   line-height: 124.5%;
   color: #5E6282;
   text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 .footer .footer-content {
   display: -webkit-box;
@@ -567,6 +648,7 @@ body {
   font-size: 21px;
   line-height: 124.5%;
   color: #080809;
+  margin-bottom: 34px;
 }
 .footer .footer-content .footer-menu ul {
   font-family: "Poppins";
@@ -576,6 +658,36 @@ body {
   line-height: 124.5%;
   color: #5E6282;
 }
+.footer .footer-content .footer-menu ul li {
+  margin-bottom: 10px;
+}
+.footer .footer-content .discover .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer .footer-content .discover .social .gradient-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: conic-gradient(from 180deg at 50% 50%, #B8D2F1 0deg, #F289AA 60deg, #C68BF0 106.09deg, #D164DA 153.75deg, #C963E8 221.25deg, #BFC2E8 258.75deg, #FFC999 288.75deg, #D0D8C9 315deg, #BAD0F1 334.13deg, #CED8CB 358.97deg, rgba(255, 255, 255, 0) 360deg);
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.footer .footer-content .discover .social .gradient-circle > img {
+  margin: 14.5px;
+}
+.footer .footer-content .discover p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 124.5%;
+  letter-spacing: 0.005em;
+  color: #5E6282;
+  margin-bottom: 15px;
+}
+
 .logos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -630,7 +742,7 @@ body {
 }
 .services .service-menu .service-box {
   position: relative;
-  width: 20.8333333333%;
+  width: 20.8%;
 }
 .services .service-menu .service-box .service {
   display: -webkit-box;
@@ -711,7 +823,7 @@ body {
   position: relative;
   max-width: 1170px;
   height: 407px;
-  background: #DFD7F9;
+  background: rgba(223, 215, 249, 0.2);
   border-radius: 129px 20px 20px 20px;
 }
 .subscribes .send .send-icon {
@@ -746,9 +858,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 2;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 75px;
 }
 .subscribes .send .form .form-lable {
   display: -webkit-box;
@@ -806,6 +921,7 @@ body {
   line-height: 27px;
   text-transform: uppercase;
   color: #5E6282;
+  margin-bottom: 10px;
 }
 .testimonials .testimonials-header h1 {
   font-family: "Volkhov";
@@ -834,6 +950,7 @@ body {
 }
 .testimonials .people-say .people-text p {
   padding-left: 34px;
+  padding-bottom: 30px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
@@ -853,4 +970,5 @@ body {
   line-height: 27px;
   color: #5E6282;
   padding-left: 34px;
+  margin-bottom: 5px;
 }

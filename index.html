@@ -22,15 +22,15 @@
     <!--Main-->
     <div class="main">
         <img src="img/1-main/decore.svg" class="decore" alt="decore">
-        <nav class="nav">
-            <div class="conteiner">
+        <div class="conteiner">
+            <nav class="nav">
                 <div class="nav-menu">
                     <div class="logo">
                         <img src="img/1-main/logo.svg" alt="logo">
                     </div>
                     <div class="nav-list">
                         <ul>
-                            <li><a href="#" class="active">Desitnations</a></li>
+                            <li><a href="#">Desitnations</a></li>
                             <li><a href="#">Hotels</a></li>
                             <li><a href="#">Flights</a></li>
                             <li><a href="#">Bookings</a></li>
@@ -44,10 +44,8 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </nav>
-        <div class="conteiner">
-            <div class="main-content">
+            </nav>
+            <header class="main-content">
                 <div class="travel">
                     <p>Best Destinations around the world</p>
                     <h1>Travel, enjoy and live a new and full life</h1>
@@ -58,18 +56,20 @@
                         </div>
                         <div class="play-button">
                             <button>
-                                <img src="./img/1-main/play-button.svg" alt="play-button">
+                                <div class="pink-circle">
+                                    <img src="./img/1-main/play-button.svg" alt="play-button">
+                                </div>
                                 <p>Play Demo</p>
                             </button>  
                         </div>
                     </div>
                 </div>
                 <div class="travel-photo">
-                    <img src="./img/1-main/airplane.svg" class="airplane-1" alt="airplane-1">
+                    <img src="./img/1-main/airplane.svg" class="airplane-1" id="airplane" alt="airplane-1">
                     <img src="./img/1-main/happy-girl.png" class="happy-girl" alt="happy-girl">
                     <img src="./img/1-main/airplane.svg" class="airplane-2" alt="airplane-2">
                 </div>
-            </div>
+            </header>
         </div>
     </div>
     <!--We Offer Best Services-->
@@ -81,7 +81,9 @@
             <div class="service-menu">
                 <div class="service-box">
                     <div class="service">
-                        <img src="./img/2-services/calc-weather.svg" alt="calc-weather">
+                        <div class="service-img">
+                            <img src="./img/2-services/calc-weather.svg" alt="calc-weather">
+                        </div>
                         <p>Calculated Weather</p>
                         <p>Built Wicket longer admire do barton vanity itself do in it.</p>
                     </div>
@@ -89,7 +91,9 @@
                 </div>
                 <div class="service-box">
                     <div class="service">
-                        <img src="./img/2-services/best-flights.svg" alt="best-flights">
+                        <div class="service-img">
+                            <img src="./img/2-services/best-flights.svg" alt="best-flights">
+                        </div>
                         <p>Best Flights</p>
                         <p>Engrossed listening. Park gate sell they west hard for the.</p>
                     </div>
@@ -97,7 +101,9 @@
                 </div>
                 <div class="service-box">
                     <div class="service">
-                        <img src="./img/2-services/local-events.png" alt="local-events">
+                        <div class="service-img">
+                            <img src="./img/2-services/local-events.png" alt="local-events">
+                        </div>
                         <p>Local Events</p>
                         <p>Barton vanity itself do in it. Preferd to men it engrossed listening. </p>
                     </div>
@@ -105,7 +111,9 @@
                 </div>
                 <div class="service-box">
                     <div class="service">
-                        <img src="./img/2-services/customization.svg" alt="customization">
+                        <div class="service-img">
+                            <img src="./img/2-services/customization.svg" alt="customization">
+                        </div>
                         <p>Customization</p>
                         <p>We deliver outsourced aviation services for military customers</p>
                     </div>
@@ -116,7 +124,6 @@
     </div>
     <!--Top Destinations-->
     <div class="destinations">
-        <img src="./img/3-destinations/decore-1.svg" class="decore" alt="decore">
         <div class="conteiner">
             <p>Top Selling</p>
             <h1>Top Destinations</h1>
@@ -148,6 +155,7 @@
                     </div>
                 </div>
                 <div class="dest-box">
+                    <img src="./img/3-destinations/decore-1.svg" class="decore" alt="decore">
                     <img src="./img/3-destinations/full-europe.png" class="place" alt="place">
                     <div class="card">
                         <div class="first-row">
@@ -225,21 +233,23 @@
                         <img src="./img/4-book-your-trip/building-1.svg" alt="icon">
                         <p>24 people going</p>
                     </button>
-                    <button class="heart-icon">
-                        <img src="./img/4-book-your-trip/heart.svg" class="heart-icon" alt="icon">
-                    </button>
-                </div>
-                <div class="ongoing-menu">
-                    <div>
-                        <img src="./img/4-book-your-trip/ongoing-rome.png" alt="icon">
-                    </div>
-                    <div class="ongoing-content">
-                        <p>Ongoing<p>
-                        <h3>Trip to Rome</h3>
-                        <p class="percent">40% <span>completed</span></p>
-                        <div class="slider-background">
-                            <div class="slider"></div>
-                        </div>
+                    <div class="tooltip">
+                        <button class="heart-icon">
+                            <img src="./img/4-book-your-trip/heart.svg" class="heart-icon" alt="icon">
+                        </button>
+                        <span class="ongoing-menu">
+                            <div>
+                                <img src="./img/4-book-your-trip/ongoing-rome.png" alt="icon">
+                            </div>
+                            <div class="ongoing-content">
+                                <p>Ongoing<p>
+                                <h3>Trip to Rome</h3>
+                                <p class="percent">40% <span>completed</span></p>
+                                <div class="slider-background">
+                                    <div class="slider"></div>
+                                </div>
+                            </div>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -346,7 +356,9 @@
                             <img src="./img/8-footer/social/facebook.svg" alt="social">
                         </button>
                         <button>
-                            <img src="./img/8-footer/social/instagram.svg" alt="social">
+                            <div class="gradient-circle">
+                                <img src="./img/8-footer/social/instagram.svg" alt="social">
+                            </div>
                         </button>
                         <button>
                             <img src="./img/8-footer/social/twitter.svg" alt="social">
@@ -366,5 +378,16 @@
             <p>All rights reserved@jadoo.com</p>
         </footer>
     </div>
+
+    <script>
+        const mouseTarget = document.getElementById('airplane');
+        mouseTarget.addEventListener('mouseenter', (e) => {
+          mouseTarget.classList.add('airplane-fl');
+          setTimeout(() => {
+            mouseTarget.classList.remove('airplane-fl');
+            }, 3000
+          );
+        });
+    </script>
 </body>
 </html>

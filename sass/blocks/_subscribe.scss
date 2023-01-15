@@ -14,8 +14,7 @@
         position: relative;
         max-width: 1170px;
         height: 407px;
-        background: #DFD7F9;
-        //background: rgba(223, 215, 249, 0.2);
+        background: rgba(223, 215, 249, 0.2);
         border-radius: 129px 20px 20px 20px;
         .send-icon {
             position: absolute;
@@ -47,7 +46,10 @@
         }
         .form {
             display: flex;
+            position: relative;
+            z-index: 2;
             justify-content: center;
+            margin-top: 75px;
             .form-lable {
                 display: flex;
                 align-items: center;

@@ -1,14 +1,11 @@
-@keyframes flight {
-    0% {
-
-    }
-    100% {
-        left: 800px;
-        bottom: 800px;
-    }
-}
+@keyframes bigBoxAnimation{
+    100% {transform:translateX(1000px);}
+  }
+  
 .main {
+    max-width: 1440px;
     width: 100%;
+    margin-bottom: 100px;
     position: relative;
     .decore {
         width: 100%;
@@ -31,14 +28,15 @@
             ul {
                 display: flex;
                 li {
-                    margin-right: 60px;
+                    margin-right: 40px;
+                        border: 1px;
+                        border-radius: 5px;
+                        padding: 5px 10px;
                     &:last-child {
                         margin: 0;
                     }
                     &:nth-child(6) {
                         border: 1px solid #212832;
-                        border-radius: 5px;
-                        padding: 5px 10px;
                     }
                     a {
                         display: block;
@@ -49,9 +47,9 @@
                         font-size: 17px;
                         line-height: 22px;
                         color: #212832;
-                        &.active, &:hover {
+                        &:hover {
                             color: orange;
-                            font-weight: 700;
+                            transform: scale(1.15);
                         }
                         &:last-child {
                             display: flex;
@@ -70,12 +68,13 @@
     }
     .main-content {
         display: flex;
+        position: relative;
         width: 100%;
-        padding-bottom: 100px;
         .travel {
             display: flex;
             flex-direction: column;
-            width: 45%;
+            padding-top: 100px;
+            width: 55%;
             >p {
                 font-family: 'Poppins';
                 font-style: normal;
@@ -84,8 +83,9 @@
                 line-height: 30px;
                 text-transform: uppercase;
                 color: #DF6951;
+                margin-bottom: 24px;
             }
-            h1 {
+            >h1 {
                 font-family: 'Volkhov';
                 font-style: normal;
                 font-weight: 700;
@@ -93,14 +93,16 @@
                 line-height: 89px;
                 letter-spacing: -0.04em;
                 color: #181E4B;
+                margin-bottom: 30px;
             }
-            h3 {
+            >h3 {
                 font-family: 'Poppins';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 30px;
                 color: #5E6282;
+                margin-bottom: 30px;
             }
             .main-buttons {
                 display: flex;
@@ -123,6 +125,7 @@
                 }
                 .play-button {
                     button {
+                        margin-left: 44px;
                         display: flex;
                         align-items: center;
                         font-family: 'Poppins';
@@ -131,8 +134,22 @@
                         font-size: 17px;
                         line-height: 26px;
                         color: #686D77;
-                        img {
-                            display: block;
+                        >p {
+                            padding-left: 21px;
+                        }
+                        .pink-circle {
+                            position: relative;
+                            width: 52px;
+                            height: 52px;
+                            border-radius: 50%;
+                            background: #DF6951;
+                            box-shadow: 0px 15px 30px rgba(223, 105, 81, 0.3);
+                            >img {
+                                position: absolute;
+                                top: 18.5px;
+                                left: 22px;
+                                display: block;
+                            }
                         }
                     }
                 }
@@ -152,9 +169,6 @@
                 top: 3%;
                 left: 20%;
                 z-index: 2;
-                &:hover {
-                    animation: 3s flight;
-                }
             }
             .airplane-2 {
                 position: absolute;
@@ -162,6 +176,9 @@
                 top: 12%;
                 right: 0;
                 z-index: 0;
+            }
+            .airplane-fl {
+                animation: bigBoxAnimation 3s infinite linear;
             }
         }
     }
