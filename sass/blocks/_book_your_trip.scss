@@ -1,6 +1,7 @@
 .book-your-trip {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     .book-menu {
         width: 50%;
         >p {
